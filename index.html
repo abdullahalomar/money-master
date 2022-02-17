@@ -12,7 +12,7 @@
   </head>
   <body>
     
-    <div class="container">
+    <!-- <div class="container">
         <div class="text-center mt-4 mb-3">
             <h1>OWN MONEY ACCOUNT</h1>
         </div>
@@ -27,7 +27,7 @@
               <div class="mb-3 row ms-lg-5">
                 <label for="input" class="col-sm-2 col-form-label ">Income:</label>
                 <div class="col-sm-10 col-md-4">
-                    <input class="form-control" type="text" aria-label="readonly input example" >
+                    <input id="income" class="form-control" type="text" aria-label="readonly input example" >
                 </div>
               </div>
               <div class="text-center pb-2 me-lg-5">
@@ -36,19 +36,19 @@
               <div class="mb-3 row ms-lg-5">
                 <label for="input" class="col-sm-2 col-form-label">Food:</label>
                 <div class="col-sm-10 col-md-4">
-                    <input class="form-control" type="text" aria-label="readonly input example">
+                    <input id="food" class="form-control" type="text" aria-label="readonly input example">
                 </div>
               </div>
               <div class="mb-3 row ms-lg-5">
                 <label for="input" class="col-sm-2 col-form-label">Rent:</label>
                 <div class="col-sm-10 col-md-4">
-                    <input class="form-control" type="text" aria-label="readonly input example">
+                    <input id="rent" class="form-control" type="text" aria-label="readonly input example">
                 </div>
               </div>
               <div class="mb-3 row ms-lg-5">
                 <label for="input" class="col-sm-2 col-form-label">Clothes:</label>
                 <div class="col-sm-10 col-md-4">
-                    <input class="form-control" type="text" aria-label="readonly input example">
+                    <input id="cloth" class="form-control" type="text" aria-label="readonly input example">
                 </div>
               </div>
               <div class="text-center ps-5 me-lg-5">
@@ -76,7 +76,140 @@
               </div>
           </div>
         </div>
-      </div>
+      </div> -->
+      <main>
+        <div class="container my-5">
+            <h1 class="text-center mt-5">
+                Expenses Manager 💰
+            </h1>
+            <div class="mt-5 row">
+                <div class="col-md-6 col-12   mb-3">
+                    <div class="height bg-image">
+
+                    </div>
+
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card bg-offwhite height">
+                        <div class="card-body">
+
+                            <div class="input-container mx-auto">
+                                <!-- Income section -->
+                                <div class="my-3">
+                                    <h4 class="text-center mb-4">
+                                        Income
+                                    </h4>
+                                    <div class="form-group row">
+                                        <label for="incomeInput" class="col-4 col-form-label text-right">Income
+                                            :</label>
+                                        <div class="col-8">
+                                            <input type="text" id="incomeInput" class="form-control bg-gray"
+                                                name="income">
+                                            <span class="invalid-feedback">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End of income section -->
+                                <!-- Expenses section -->
+                                <div class="my-3">
+                                    <h4 class="text-center mb-4">
+                                        Expenses
+                                    </h4>
+                                    <div class="form-group row mb-2">
+                                        <label for="foodExpenseInput" class="col-4 col-form-label text-right">Food
+                                            :</label>
+                                        <div class="col-8">
+                                            <input type="text" id="foodExpensesInput" class="form-control bg-gray"
+                                                name="food">
+                                            <span class="invalid-feedback">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-2">
+                                        <label for="rentExpensesInput" class="col-4 col-form-label text-right">Rent
+                                            :</label>
+                                        <div class="col-8">
+                                            <input type="text" id="rentExpensesInput" class="form-control bg-gray"
+                                                name="rent">
+                                            <span class="invalid-feedback">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="clothesExpensesInput"
+                                            class="col-4 col-form-label text-right">Clothes
+                                            :</label>
+                                        <div class="col-8">
+                                            <input type="text" id="clothesExpensesInput" class="form-control bg-gray"
+                                                name="clothes">
+                                            <span class="invalid-feedback">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End of expenses section -->
+                                <!-- Expenses calculation section -->
+                                <div class="my-3 text-center">
+
+                                    <button class="btn btn-primary" id="expensesCalculateBtn">
+                                        Calculate
+                                    </button>
+
+
+                                    <div class="mt-4">
+                                        <h5>
+                                            Total Expenses : <span id="total-expense">0.00</span> ৳
+                                        </h5>
+                                        <h5>
+                                            Balance : <span id="balance">0.00</span> ৳
+                                        </h5>
+                                    </div>
+
+
+                                </div>
+                                <!-- End of expenses calculation section -->
+
+                                <!-- Savings calculation section  -->
+                                <div class="mt-5 text-center">
+                                    <div class="form row">
+                                        <label for="saveInput" class="col-3 col-form-label text-right">Save :</label>
+                                        <div class="col-4">
+                                            <input type="text" id="saveInput" name="save" class="form-control bg-gray">
+                                            <small class="invalid-feedback">
+
+                                            </small>
+                                        </div>
+                                        <strong class="col-1">
+                                            %
+                                        </strong>
+                                        <div class="col-2">
+                                            <button class="btn btn-primary" id="saveBtn">Save</button>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4">
+                                        <h5>
+                                            Saving Amount : <span id="saving">0.00</span> ৳
+                                        </h5>
+                                        <h5>
+                                            Remaining Balance : <span id="remaining-balance">0.00</span> ৳
+                                        </h5>
+                                    </div>
+                                </div>
+                                <!-- End of savings calculation section  -->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
 
       <script src="js/money-calculation.js"></script>
 
