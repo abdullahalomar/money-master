@@ -1,12 +1,22 @@
-var income; // income var declared globally
-var food; // food var declared globally
-var rent; // rent var declared globally
-var clothes; // clothes var declared globally
-var expenses; // expenses var declared globally
-var balance; // balance var declared globally
-var savePercent; // savePercent var declared globally
-var saving; // saving var declared globally
-var remainingBalance; // remainingBalance  var declared globally
+
+ // income 
+ let income;
+ // food 
+ let food;
+ // rent 
+ let rent;
+// clothes 
+let clothes; 
+ // expenses 
+ let expenses;
+// balance 
+let balance; 
+// savePercent
+let savePercent; 
+ // saving 
+let saving;
+ // remainingBalance
+ let remainingBalance; 
 
 
 /**
